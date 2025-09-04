@@ -1,0 +1,21 @@
+<div>
+    <button (click)="onEventsTest($event)">EVENTS TEST</button>
+    <input type="text" (input)="onEventsTest($event)" (blur)="onEventsTest($event)" placeholder="Type something...">
+    <div (mouseenter)="onEventsTest($event)" style="width: 300px; height: 300px;background:red; border: 1px solid black;"></div>
+    <div (mouseleave)="onEventsTest($event)" style="width: 300px; height: 300px;background:rgb(81, 255, 0); border: 1px solid black;"></div>
+</div>
+<!-- Set Value | Get Value  -->
+<div>
+    <p>GET AND SET VALUE</p>
+    <input value="{{name}}" type="text" (input)="onInputChange($event)">
+    <h1>Output {{displayName}}</h1>
+    <button (click)="setValue()">Set Value</button>
+    <button (click)="getValue()">Get Value</button>
+    <hr>
+    <br>
+    <p>Template Reference Variable</p>
+    <p>Email: </p>
+    <input #emailField value="{{displayEmail}}" type="email" placeholder="Enter Email...">
+    <button (click)="getEmail(emailField.value)">GET</button>
+    <button (click)="setEmail(emailField.value)">SET</button>
+</div>

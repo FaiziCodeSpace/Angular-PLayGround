@@ -5,6 +5,7 @@
     <button [style.background]="color" (click)="handleClick('BLUE')">BLUE</button>
     <button [style.background]="color" (click)="handleClick('YELLOW')">YELLOW</button>
     <button [style.background]="color" (click)="handleClick('PURPLE')">PURPLE</button>
+    <input type="text" (input)="handleInput($event)" placeholder="Type a color here"/>
     @if(color == 'RED') {
         <p style="color: red;">You selected RED</p>
     } @else if(color == 'GREEN') {

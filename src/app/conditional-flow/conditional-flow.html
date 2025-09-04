@@ -1,0 +1,19 @@
+<div>
+    <h1>Testing Conditional Flow</h1>
+    <button [style.background]="color" (click)="handleClick('RED')">RED</button>
+    <button [style.background]="color" (click)="handleClick('GREEN')">GREEN</button>
+    <button [style.background]="color" (click)="handleClick('BLUE')">BLUE</button>
+    <button [style.background]="color" (click)="handleClick('YELLOW')">YELLOW</button>
+    <button [style.background]="color" (click)="handleClick('PURPLE')">PURPLE</button>
+    @if(color == 'RED') {
+        <p style="color: red;">You selected RED</p>
+    } @else if(color == 'GREEN') {
+        <p style="color: green;">You selected GREEN</p>
+    } @else if(color == 'BLUE') {
+        <p style="color: blue;">You selected BLUE</p>
+    } @else if(color == 'YELLOW') {
+        <p style="color: yellow;">You selected YELLOW</p>
+    } @else if(color == 'PURPLE') {
+        <p style="color: #d400ff;">You selected PURPLE</p>
+    }
+</div>

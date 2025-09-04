@@ -4,10 +4,11 @@ import { Title } from './title/title';
 import { Paragraph } from './paragraph/paragraph';
 import { Counter } from './counter/counter';
 import { Events } from './events/events';
+import { ConditionalFlow } from "./conditional-flow/conditional-flow";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Title, Paragraph, Counter, Events],
+  imports: [RouterOutlet, Title, Paragraph, Counter, Events, ConditionalFlow, ConditionalFlow],
   templateUrl: './app.html',
   styleUrl: './app.css'  
 })

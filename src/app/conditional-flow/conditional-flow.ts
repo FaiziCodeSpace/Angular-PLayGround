@@ -11,4 +11,7 @@ color='red';
 handleClick(color: string){
   this.color = color;
 }
+handleInput(event: any){
+  this.color = (event.target as HTMLInputElement).value;
+}
 }

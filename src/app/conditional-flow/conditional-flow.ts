@@ -8,10 +8,11 @@ import { Component } from '@angular/core';
 })
 export class ConditionalFlow {
 color='red';
-handleClick(color: string){
-  this.color = color;
+color2='red';
+handleClick(color: any){
+  this.color2 = color;
 }
 handleInput(event: any){
-  this.color = (event.target as HTMLInputElement).value;
+  this.color2 = (event.target as HTMLInputElement).value.toUpperCase();
 }
 }

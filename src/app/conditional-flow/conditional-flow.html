@@ -1,20 +1,54 @@
 <div>
+  <div>
     <h1>Testing Conditional Flow</h1>
     <button [style.background]="color" (click)="handleClick('RED')">RED</button>
     <button [style.background]="color" (click)="handleClick('GREEN')">GREEN</button>
     <button [style.background]="color" (click)="handleClick('BLUE')">BLUE</button>
     <button [style.background]="color" (click)="handleClick('YELLOW')">YELLOW</button>
     <button [style.background]="color" (click)="handleClick('PURPLE')">PURPLE</button>
-    <input type="text" (input)="handleInput($event)" placeholder="Type a color here"/>
+    <input type="text" (input)="handleInput($event)" placeholder="Type a color here" />
     @if(color == 'RED') {
-        <p style="color: red;">You selected RED</p>
+    <p style="color: red">You selected RED</p>
     } @else if(color == 'GREEN') {
-        <p style="color: green;">You selected GREEN</p>
+    <p style="color: green">You selected GREEN</p>
     } @else if(color == 'BLUE') {
-        <p style="color: blue;">You selected BLUE</p>
+    <p style="color: blue">You selected BLUE</p>
     } @else if(color == 'YELLOW') {
-        <p style="color: yellow;">You selected YELLOW</p>
+    <p style="color: yellow">You selected YELLOW</p>
     } @else if(color == 'PURPLE') {
-        <p style="color: #d400ff;">You selected PURPLE</p>
+    <p style="color: #d400ff">You selected PURPLE</p>
     }
+  </div>
+  <div>
+    <h1>Switch Case Example</h1>
+    <h1>Testing Conditional Flow</h1>
+    <button [style.background]="color2" (click)="handleClick('RED')">RED</button>
+    <button [style.background]="color2" (click)="handleClick('GREEN')">GREEN</button>
+    <button [style.background]="color2" (click)="handleClick('BLUE')">BLUE</button>
+    <button [style.background]="color2" (click)="handleClick('YELLOW')">YELLOW</button>
+    <button [style.background]="color2" (click)="handleClick('PURPLE')">PURPLE</button>
+    <input type="text" (input)="handleInput($event)" placeholder="Type a color here" />
+
+    @switch (color2) {
+      @case ('RED') {
+        <p style="color: red">You selected RED</p>
+      }
+      @case ('GREEN') {
+        <p style="color: green">You selected GREEN</p>
+      }
+      @case ('BLUE') {
+        <p style="color: blue">You selected BLUE</p>
+      }
+      @case ('YELLOW') {
+        <p style="color: yellow">You selected YELLOW</p>
+      }
+      @case ('PURPLE')   {
+        <p style="color: #d400ff">You selected PURPLE</p>
+      }
+      @default {
+        <p style="color: black">No color selected</p>
+      }
+    }
+    
+  </div>
 </div>

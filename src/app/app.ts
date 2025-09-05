@@ -5,10 +5,11 @@ import { Paragraph } from './paragraph/paragraph';
 import { Counter } from './counter/counter';
 import { Events } from './events/events';
 import { ConditionalFlow } from "./conditional-flow/conditional-flow";
+import { Loop } from './loop/loop';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Title, Paragraph, Counter, Events, ConditionalFlow, ConditionalFlow],
+  imports: [Title, Paragraph, Counter, Events, ConditionalFlow, ConditionalFlow, Loop],
   templateUrl: './app.html',
   styleUrl: './app.css'  
 })

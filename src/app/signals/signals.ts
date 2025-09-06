@@ -7,8 +7,9 @@ import { Component, signal } from '@angular/core';
   styleUrl: './signals.css'
 })
 export class Signals {
+  value= signal(0);
   count= signal(0);
   valCall(val: any) {
-    this.count.set(val);
+    this.value.set(val);
   }
 }

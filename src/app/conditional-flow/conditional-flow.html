@@ -1,11 +1,11 @@
 <div>
   <div>
     <h1>Testing Conditional Flow</h1>
-    <button [style.background]="color" (click)="handleClick('RED')">RED</button>
-    <button [style.background]="color" (click)="handleClick('GREEN')">GREEN</button>
-    <button [style.background]="color" (click)="handleClick('BLUE')">BLUE</button>
-    <button [style.background]="color" (click)="handleClick('YELLOW')">YELLOW</button>
-    <button [style.background]="color" (click)="handleClick('PURPLE')">PURPLE</button>
+    <button [style.background]="color" (click)="handleClickif('RED')">RED</button>
+    <button [style.background]="color" (click)="handleClickif('GREEN')">GREEN</button>
+    <button [style.background]="color" (click)="handleClickif('BLUE')">BLUE</button>
+    <button [style.background]="color" (click)="handleClickif('YELLOW')">YELLOW</button>
+    <button [style.background]="color" (click)="handleClickif('PURPLE')">PURPLE</button>
     <input type="text" (input)="handleInput($event)" placeholder="Type a color here" />
     @if(color == 'RED') {
     <p style="color: red">You selected RED</p>

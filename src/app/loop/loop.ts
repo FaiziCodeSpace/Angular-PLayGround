@@ -12,6 +12,7 @@ export class Loop {
     {name: "John", age:25, email:"john.doe@example.com"},
     {name: "Jane", age:28, email:"jane.smith@example.com"}
   ]
+id: any;
   handleButtonClick(profile: any){
     console.log(profile);
   }

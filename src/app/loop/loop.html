@@ -1,9 +1,9 @@
 <div>
   <h1>Loop Component</h1>
   <ul>
-    @for(profile of profiles; track profile.name) {
+    @for(profile of profiles; track profile.name;let id=$index) {
     <li>
-        <h2>{{profile.name}}</h2>
+        <h2>{{id}} {{profile.name}}</h2>
         <p>Age: {{profile.age}}</p>
         <p>Email: {{profile.email}}</p>
         <button (click)="handleButtonClick(profile.name)">Click Me</button>

@@ -1,8 +1,20 @@
 <div>
+  <div>
     <h1>Signals</h1>
     <h1>Update the Value:</h1>
-    <input type="text" placeholder="Value" #val>
-    <input type="color" #color>
+    <input type="text" placeholder="Value" #val />
+    <input type="color" #color />
     <button (click)="valCall(val.value)">Update</button>
-    <h2>Current Value: <span [style.color]="color.value">{{count()}}</span></h2>
+    <h2>
+      Current Value: <span [style.color]="color.value">{{ value() }}</span>
+    </h2>
+  </div>
+
+  <div>
+    <h1>Signal Example</h1>
+    <h2>Count: {{ count() }}</h2>
+    <button (click)="count.set(count() + 1)">Increment</button>
+    <button (click)="count.set(count()>=1 ? count() - 1 : 0)">Decrement</button>
+    <button (click)="count.set(0)">Reset</button>
+  </div>
 </div>

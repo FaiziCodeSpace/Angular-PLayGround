@@ -1,0 +1,8 @@
+<div>
+    <h1>Signals</h1>
+    <h1>Update the Value:</h1>
+    <input type="text" placeholder="Value" #val>
+    <input type="color" #color>
+    <button (click)="valCall(val.value)">Update</button>
+    <h2>Current Value: <span [style.color]="color.value">{{count()}}</span></h2>
+</div>

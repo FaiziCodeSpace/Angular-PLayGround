@@ -6,10 +6,11 @@ import { Counter } from './counter/counter';
 import { Events } from './events/events';
 import { ConditionalFlow } from "./conditional-flow/conditional-flow";
 import { Loop } from './loop/loop';
+import { Signals } from './signals/signals';
 
 @Component({
   selector: 'app-root',
-  imports: [Title, Paragraph, Counter, Events, ConditionalFlow, ConditionalFlow, Loop],
+  imports: [Title, Paragraph, Counter, Events, ConditionalFlow, ConditionalFlow, Loop, Signals],
   templateUrl: './app.html',
   styleUrl: './app.css'  
 })

@@ -9,8 +9,11 @@ import { Component } from '@angular/core';
 export class ConditionalFlow {
 color='red';
 color2='red';
-handleClick(color: any){
-  this.color2 = color;
+handleClickif(col: any){
+  this.color = col;
+}
+handleClick(col: any){
+  this.color2 = col;
 }
 handleInput(event: any){
   this.color2 = (event.target as HTMLInputElement).value.toUpperCase();

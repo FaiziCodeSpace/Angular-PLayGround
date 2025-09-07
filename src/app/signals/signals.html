@@ -1,32 +1,14 @@
-<div>
-  <div>
-    <h1>Signals</h1>
-    <h1>Update the Value:</h1>
-    <input type="text" placeholder="Value" #val />
-    <input type="color" #color />
-    <button (click)="valCall(val.value)">Update</button>
-    <h2>
-      Current Value: <span [style.color]="color.value">{{ value() }}</span>
-    </h2>
-  </div>
+<div class="container">
+  <h1>Angular Signals Example</h1>
 
-  <div>
-    <h1>Signal Example</h1>
-    <h2>Count: {{ count() }}</h2>
-    <button (click)="count.set(count() + 1)">Increment</button>
-    <button (click)="count.set(count()>=1 ? count() - 1 : 0)">Decrement</button>
-    <button (click)="count.set(0)">Reset</button>
-  </div>
-</div>
-<div>
-  <h1>Signal Effect</h1>
-  <h3>Count:{{number()}}</h3>
-  <button (click)="clickHandle('increase')">INCREASE</button>
-  <button (click)="clickHandle('decrease')">DECREASE</button>
-</div>
-<div>
-  <h1>Signal Datatypes</h1>
+  <!-- Number Counter -->
+  <h3>Counter: {{ number() }}</h3>
+  <button (click)="clickHandle('increase')">Increase</button>
+  <button (click)="clickHandle('decrease')">Decrease</button>
+
+  <hr />
+
+  <!-- Dynamic Value -->
   <h3>Value: {{ value() }}</h3>
-  <h3>Count: {{ count() }}</h3>
-  <h3>Number: {{ number() }}</h3>
+  <input type="text" (input)="valCall($event.target.value)" placeholder="Set value" />
 </div>

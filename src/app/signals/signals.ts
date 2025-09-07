@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, effect, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-signals',
@@ -7,9 +7,9 @@ import { Component, effect, signal } from '@angular/core';
   styleUrl: './signals.css'
 })
 export class Signals {
-  value= signal(0);
-  count= signal(0);
-  number= signal(0);
+  value: WritableSignal<number | string> = signal(0);
+  count= signal<number>(0);
+  number: WritableSignal<number> = signal(0);
   constructor(){
     effect(() => {
       console.log('Number changed:', this.number());
@@ -25,5 +25,7 @@ export class Signals {
   valCall(val: any) {
     this.value.set(val);
   }
+
+
 
 }

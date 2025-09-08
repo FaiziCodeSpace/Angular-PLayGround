@@ -23,5 +23,10 @@
   <p>X: {{x()}} + Y: {{y()}}</p>
   <p>Sum: {{sum()}}</p>
   <button (click)="changeComputedValue()">Change Computed Values</button>
-  <p>Note: we cannot change Values of the Computed Properties directly, but we can change the dependent Signals that they rely on.  </p>
+  <p>Note: we cannot change Values of the Computed Properties directly, but we can change the dependent Signals that they rely on.</p>
+
+  <hr>
+  <h3>Effects</h3>
+  <p>{{count()}}</p>
+  <button (click)="toggleEffect()">TOGGLE</button>
 </div>

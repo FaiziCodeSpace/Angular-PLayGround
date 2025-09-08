@@ -13,8 +13,15 @@
   <input type="text" (input)="valCall($event.target.value)" placeholder="Set value" />
 
   <hr />
-  <h3>Computed Data</h3>
+  <h3>Computed Values vs Non-Computed Values</h3>
   <p>Computed Value: {{unChangable()}} <span style="color: Red;">{{note}}</span></p>
   <p>Computed Value: {{changable()}}</p>
   <button (click)="increaseValue()">Increase Value</button>
+
+  <hr>
+  <h3>Computed Property</h3>
+  <p>X: {{x()}} + Y: {{y()}}</p>
+  <p>Sum: {{sum()}}</p>
+  <button (click)="changeComputedValue()">Change Computed Values</button>
+  <p>Note: we cannot change Values of the Computed Properties directly, but we can change the dependent Signals that they rely on.  </p>
 </div>

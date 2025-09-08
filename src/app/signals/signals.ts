@@ -9,14 +9,9 @@ import { sign } from 'node:crypto';
 })
 export class Signals {
   value: WritableSignal<number | string> = signal(0);
-  count = signal<number>(0);
   number: WritableSignal<number> = signal(0);
 
-  constructor() {
-    effect(() => {
-      console.log('Number changed:', this.number());
-    });
-  }
+  
 
   clickHandle(condition: string) {
     if (condition === 'increase') {
@@ -51,5 +46,20 @@ export class Signals {
     this.x.set(this.x() + 10);
   }
 
+  // Effect
+  count = signal<number>(0);
+  constructor() {
+    effect(() => {
+      console.log('Count changed:', this.count());
+      if(this.count() == 5){
+        alert('Count reached 5!');
+      }else if(this.count() == 10){
+        alert('Count reached 10!');
+      }
+    });
+  }
+  toggleEffect(){
+    this.count.set(this.count() + 1);
+  }
 
 }

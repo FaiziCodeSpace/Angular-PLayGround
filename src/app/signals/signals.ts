@@ -1,4 +1,5 @@
 import { Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
+import { sign } from 'node:crypto';
 
 @Component({
   selector: 'app-signals',
@@ -42,6 +43,13 @@ export class Signals {
     console.log(this.changable());
   }
 
+  // Computed Property
+  x=signal(10);
+  y=signal(20);
+  sum= computed(()=> this.x() + this.y()); // You can use other signals inside computed to change the value dynamically
+  changeComputedValue(){
+    this.x.set(this.x() + 10);
+  }
 
 
 }

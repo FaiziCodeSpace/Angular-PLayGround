@@ -11,4 +11,10 @@
   <!-- Dynamic Value -->
   <h3>Value: {{ value() }}</h3>
   <input type="text" (input)="valCall($event.target.value)" placeholder="Set value" />
+
+  <hr />
+  <h3>Computed Data</h3>
+  <p>Computed Value: {{unChangable()}} <span style="color: Red;">{{note}}</span></p>
+  <p>Computed Value: {{changable()}}</p>
+  <button (click)="increaseValue()">Increase Value</button>
 </div>

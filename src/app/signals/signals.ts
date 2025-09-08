@@ -1,4 +1,4 @@
-import { Component, effect, signal, WritableSignal } from '@angular/core';
+import { Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-signals',
@@ -28,4 +28,20 @@ export class Signals {
   valCall(val: any) {
     this.value.set(val);
   }
+
+
+  // Computed Property
+  unChangable:Signal<number>= computed(()=> 120);
+  changable= signal<number>(120);
+  note= '';
+  increaseValue(){
+    this.unChangable() + 10; // ❌ does nothing
+    this.changable.update((v) => v + 10);
+    this.note= 'This is a computed Value, so it is unchangable';  
+    console.log(this.unChangable());
+    console.log(this.changable());
+  }
+
+
+
 }
